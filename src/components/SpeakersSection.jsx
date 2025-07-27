@@ -8,27 +8,27 @@ export function SpeakersSection() {
     {
       name: "Dr. Srikanth",
       topic: "802.11 PHY Evolution",
-      image: "https://via.placeholder.com/120x120?text=Dr.+Srikanth",
+      image: "/placeholder.svg?height=120&width=120", // Changed placeholder query
     },
     {
       name: "Susinder Gulasekaran",
       topic: "Candela Assist",
-      image: "https://via.placeholder.com/120x120?text=Susinder",
+      image: "/placeholder.svg?height=120&width=120", // Changed placeholder query
     },
     {
       name: "Shivam Thakur",
       topic: "Candela Assist",
-      image: "https://via.placeholder.com/120x120?text=Shivam",
+      image: "/placeholder.svg?height=120&width=120", // Changed placeholder query
     },
     {
       name: "Rasika",
       topic: "Candela Assist",
-      image: "https://via.placeholder.com/120x120?text=Rasika",
+      image: "/placeholder.svg?height=120&width=120", // Changed placeholder query
     },
     {
       name: "Shashank",
       topic: "Adaptive DFS",
-      image: "https://via.placeholder.com/120x120?text=Shashank",
+      image: "/placeholder.svg?height=120&width=120", // Changed placeholder query
     },
   ]
 
@@ -47,9 +47,11 @@ export function SpeakersSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
           {speakers.map((speaker, index) => (
             <AnimatedSection key={index} delay={index * 150}>
-              <Card className="group hover:shadow-xl transition-all duration-300 border-green-100 hover:border-green-200 bg-white/90 backdrop-blur-sm overflow-hidden h-full">
-                <CardContent className="p-6 text-center flex flex-col h-full">
-                  <div className="flex-1 flex flex-col justify-center">
+              <Card className="group hover:shadow-xl transition-all duration-300 border-green-100 hover:border-green-200 bg-white/90 backdrop-blur-sm overflow-hidden h-full flex flex-col">
+                <CardContent className="p-6 pt-10 text-center flex flex-col h-full">
+                  {" "}
+                  {/* Added pt-10 here */}
+                  <div className="flex-1 flex flex-col items-center justify-center">
                     <div className="relative mb-6">
                       <div className="w-28 h-28 mx-auto mb-4 relative">
                         <img
