@@ -1,9 +1,12 @@
 "use client"
 
-import { ArrowRight, User, Clock, Calendar, BookOpen, Target, Users, Share2, Wifi } from "lucide-react"
+import { ArrowRight, User, Clock, Calendar, BookOpen, Target, Users, Share2 } from "lucide-react"
 import { Card, CardHeader, CardContent, CardTitle } from "./Card"
 import { Badge } from "./Badge"
 import { Button } from "./Button"
+
+// Removed Wifi import as it's no longer needed for the logo
+// import { Wifi } from 'lucide-react'
 
 export function SessionPage({ session, onBack }) {
   return (
@@ -12,14 +15,10 @@ export function SessionPage({ session, onBack }) {
       <header className="bg-white/80 backdrop-blur-md border-b border-green-100 sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3 cursor-pointer" onClick={onBack}>
-              <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-green-700 rounded-xl flex items-center justify-center">
-                <Wifi className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h1 className="text-xl font-bold text-green-800">CTS 2025</h1>
-                <p className="text-sm text-green-600">Candela Technology Summit</p>
-              </div>
+            <div className="flex items-center gap-4 cursor-pointer" onClick={onBack}>
+              {/* Replaced the Wifi icon and text with the new logo image */}
+              <img src="/images/cts-logo.png" alt="CTS 2025 Logo" className="h-12 w-auto" />
+              <div className="hidden md:block text-green-700 text-sm font-medium">Powered by Candela Technologies</div>
             </div>
             <div className="flex items-center gap-4">
               <Button
@@ -154,10 +153,8 @@ export function SessionPage({ session, onBack }) {
         <div className="container mx-auto px-4">
           <div className="text-center">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
-                <Wifi className="w-5 h-5 text-white" />
-              </div>
-              <h3 className="text-xl font-bold">CTS 2025</h3>
+              {/* Replaced the Wifi icon and text with the new logo image */}
+              <img src="/images/cts-logo.png" alt="CTS 2025 Logo" className="h-10 w-auto" />
             </div>
             <p className="text-green-200 mb-6">Candela Technology Summit - Advancing Wireless Innovation</p>
             <p className="text-green-300 text-sm">© 2025 CTS Event — Powered by Candela Technologies</p>

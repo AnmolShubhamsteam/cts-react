@@ -1,20 +1,17 @@
 "use client"
 
-import { Wifi } from "lucide-react"
+// Removed Wifi import as it's no longer needed for the logo
+// import { Wifi } from 'lucide-react'
 
 export function Header({ onBackToHome }) {
   return (
     <header className="bg-white/80 backdrop-blur-md border-b border-green-100 sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3 cursor-pointer" onClick={onBackToHome}>
-            <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-green-700 rounded-xl flex items-center justify-center">
-              <Wifi className="w-6 h-6 text-white" />
-            </div>
-            <div>
-              <h1 className="text-xl font-bold text-green-800">CTS 2025</h1>
-              <p className="text-sm text-green-600">Candela Technology Summit</p>
-            </div>
+          <div className="flex items-center gap-4 cursor-pointer" onClick={onBackToHome}>
+            {/* Replaced the Wifi icon and text with the new logo image */}
+            <img src="/images/cts-logo.png" alt="CTS 2025 Logo" className="h-12 w-auto" />
+            <div className="hidden md:block text-green-700 text-sm font-medium">Powered by Candela Technologies</div>
           </div>
           <nav className="hidden md:flex items-center gap-6">
             <a href="#speakers" className="text-green-700 hover:text-green-800 font-medium transition-colors">
